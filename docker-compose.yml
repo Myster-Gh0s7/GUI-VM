@@ -1,0 +1,13 @@
+
+version: '3'
+services:
+  kali:
+    build: .
+    ports:
+      - "5910:5910"
+    volumes:
+       - /home/ghost/
+    cap_add:
+      - NET_ADMIN
+    stdin_open: true
+    tty: true
